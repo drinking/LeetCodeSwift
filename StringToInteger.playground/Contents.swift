@@ -1,6 +1,5 @@
 //String to Integer
 
-
 func atoi(input:String)->Int{
 
     var sign = 1
@@ -16,28 +15,25 @@ func atoi(input:String)->Int{
         if (char == "-"){
             sign = -1
         }else if let i = Int(String(char)){
-            
-            if (output < preMax){
-                return output*10 + i
-            }else if (output == preMax){
-                if (sign == -1 && i > lastNum+1){
-                    return Int.min
-                }else if (sign == 1 && i > lastNum ){
-                    return Int.max
-                }else{
-                    return output*10+i
-                }
-                
-            }else{
+            if (output > preMax || (output == preMax && i>=lastNum)){ //这个判断省了不少逻辑
                 return sign == -1 ? Int.min :Int.max
             }
-            
-
+            return output*10+i
         }
+        
         return output
+    }
+    
+
+    if (sign < 0 && result > 0){
+        return result*sign
     }
     
     return result
 }
 
-atoi("  -33434343434453945993459349593")
+atoi("  -3343434343445")
+atoi("  -3343434343445923840289304")
+
+atoi("3343434343445923840289304")
+atoi("+343445923840289304")
