@@ -1,0 +1,20 @@
+{
+    "": [
+        "string.md", 
+        "number.md", 
+        "dynamic programming.md", 
+        "readme.md"
+    ], 
+    "__positions": {
+        "number.md": 2, 
+        "string.md": 1, 
+        "readme.md": 4, 
+        "dynamic programming.md": 3
+    }, 
+    "__raw_positions": {
+        "dynamic programming.md": 3, 
+        "string.md": 1, 
+        "readme.md": 4, 
+        "number.md": 2
+    }
+}
